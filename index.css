@@ -1,0 +1,54 @@
+body {
+  width: 100%;
+  background-color: #222831;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  top: 25%;
+  bottom: 25%;
+  margin: auto;
+  flex-direction: column;
+}
+
+.container:hover {
+  cursor: none;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+}
+
+.container:hover .object {
+  animation-duration: 1s;
+  animation-name: changeRotation;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes changeRotation {
+  from {
+    transform: rotateZ(-90deg);
+  }
+
+  to {
+    transform: rotateZ(90deg);
+  }
+}
+
+.object {
+  width: 50px;
+  height: 50px;
+  background-color: #00adb5;
+
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
